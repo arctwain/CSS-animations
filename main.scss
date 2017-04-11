@@ -1,0 +1,146 @@
+@import "compass/css3";
+
+body{
+  background: #263238;
+}
+
+.perspective{
+    transform: rotateX(54deg) rotateZ(45deg);
+    transform-style: preserve-3d;
+    background: transparent;
+    height: 9em;
+    left: 50%;
+    margin: -7.5em;
+    padding: 3em;
+    position: absolute;
+    top: 50%;
+    width: 9em;
+}
+
+section{
+  transform-style: preserve-3d;
+  position: absolute;
+  width: 9em;
+  height: 9em;
+  
+  &:nth-child(2){
+    transform: translateZ(3em);
+  }
+  &:nth-child(3){
+    transform: translateZ(6em);
+  }
+}
+
+.cube{
+  width: 3em;
+  height: 3em;
+  position: relative;
+  float: left;
+  background: #e53935;
+  transform: rotateX(-90deg);
+  transform-origin: 0 0;
+  transform-style: preserve-3d;
+  animation: moveCube 4s cubic-bezier(.17,.88,.4,.98) infinite;
+ 
+  
+  &:after{
+    content: " ";
+    width: 3em;
+    height: 3em;
+    background: #29B6F6;
+    position: absolute;
+    top:-100%;
+    transform: rotateX(90deg);
+    transform-origin: 0 100%;
+  }
+  
+  &:before{
+    content: " ";
+    width: 3em;
+    height: 3em;
+    background: #FFC107;
+    position: absolute;
+    top:0;
+    left: 100%;
+    transform: rotateY(90deg);
+    transform-origin: 0 0;
+  }
+
+}
+// x y z
+$directionsArray:  //Part 1
+                   (0 0 0, -3em 0 0, -3em 0 -3em, -3em -3em -3em, 0 -3em -3em, 0 -3em 0)
+                   (0 0 0, 0 0 0, 0 0 -3em, 0 -3em -3em, 0 -3em -3em, 0 -3em 0)
+                   (0 0 0, 3em 0 0, 3em 0 -3em, 3em -3em -3em, 0 -3em -3em, 0 -3em 0)
+  
+                   (0 0 0, -3em 0 0, -3em 0 0, -3em -3em 0, -0 -3em 0, 0 -3em 0)
+                   (0 0 0, 0 0 0, 0 0 0, 0 -3em 0, 0 -3em 0, 0 -3em 0)
+                   (0 0 0, 3em 0 0, 3em 0 0, 3em -3em 0, 0 -3em 0, 0 -3em 0)
+  
+                   (0 0 0, -3em 0 0, -3em 0 3em, -3em -3em 3em, 0 -3em 3em, 0 -3em 0)
+                   (0 0 0, 0 0 0, 0 0 3em, 0 -3em 3em, 0 -3em 3em, 0 -3em 0)
+                   (0 0 0, 3em 0 0, 3em 0 3em, 3em -3em 3em, 0 -3em 3em, 0 -3em 0)
+  
+                   //Part2
+                   (0 0 0, -3em 0 0, -3em 0 -3em, -3em 0 -3em, 0 0 -3em, 0 0 0)
+                   (0 0 0, 0 0 0, 0 0 -3em, 0 0 -3em, 0 0 -3em, 0 0 0)
+                   (0 0 0, 3em 0 0, 3em 0 -3em, 3em 0 -3em, 0 0 -3em, 0 0 0)
+  
+                   (0 0 0, -3em 0 0, -3em 0 0, -3em 0 0, -0 0 0, 0 0 0)
+                   (0 0 0, 0 0 0, 0 0 0, 0 0 0, 0 0 0, 0 0 0)
+                   (0 0 0, 3em 0 0, 3em 0 0, 3em 0 0, 0 0 0, 0 0 0)
+  
+                   (0 0 0, -3em 0 0, -3em 0 3em, -3em 0 3em, 0 0 3em, 0 0 0)
+                   (0 0 0, 0 0 0, 0 0 3em, 0 0 3em, 0 0 3em, 0 0 0)
+                   (0 0 0, 3em 0 0, 3em 0 3em, 3em 0 3em, 0 0 3em, 0 0 0)
+  
+                  //Part 3
+                   (0 0 0, -3em 0 0, -3em 0 -3em, -3em 3em -3em, 0 3em -3em, 0 3em 0)
+                   (0 0 0, 0 0 0, 0 0 -3em, 0 3em -3em, 0 3em -3em, 0 3em 0)
+                   (0 0 0, 3em 0 0, 3em 0 -3em, 3em 3em -3em, 0 3em -3em, 0 3em 0)
+  
+                   (0 0 0, -3em 0 0, -3em 0 0, -3em 3em 0, -0 3em 0, 0 3em 0)
+                   (0 0 0, 0 0 0, 0 0 0, 0 3em 0, 0 3em 0, 0 3em 0)
+                   (0 0 0, 3em 0 0, 3em 0 0, 3em 3em 0, 0 3em 0, 0 3em 0)
+  
+                   (0 0 0, -3em 0 0, -3em 0 3em, -3em 3em 3em, 0 3em 3em, 0 3em 0)
+                   (0 0 0, 0 0 0, 0 0 3em, 0 3em 3em, 0 3em 3em, 0 3em 0)
+                   (0 0 0, 3em 0 0, 3em 0 3em, 3em 3em 3em, 0 3em 3em, 0 3em 0);
+
+$j : 3; $k : 1;
+
+@for $i from 0 to length($directionsArray) {  
+  section:nth-child(#{$j}) .cube:nth-child(#{$k}){
+    animation-name: moveCube#{$i+1};
+  }
+  @if ($i+1) % 9 == 0{
+    $j : $j - 1;
+  }
+  @if ($k == 9){
+    $k:1;
+  }@else{
+    $k: $k + 1;
+  }
+}
+
+@mixin moveCube($directions){
+  @for $i from 0 to length($directions) {   
+    #{$i*100/length($directions) * 1%} {
+          transform: rotateX(-90deg) translate3d(nth(nth($directions, $i+1), 1), nth(nth($directions, $i+1), 2), nth(nth($directions, $i+1), 3) );
+      
+    }
+  }
+}
+
+@mixin keyframes($animationName, $i) {
+    @keyframes #{$animationName}#{$i} {
+        @content;
+    }
+}
+
+@for $i from 0 to length($directionsArray) {   
+  $directions : nth($directionsArray, $i+1);
+  @include keyframes(moveCube, $i+1) {
+    @include moveCube($directions);
+  }
+}
