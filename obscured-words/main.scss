@@ -1,0 +1,114 @@
+$c1: #ee2323;
+$c2: #ee9323;
+$c3: #eed123;
+$c4: #3eee23;
+$c5: #236eee;
+$c6: #cd23ee;
+
+$bw1: #ddd;
+$bw2: #111;
+$bw3: #000;
+$bw4: #eee;
+$bw5: #fff;
+
+$back: #222;
+
+@mixin hover {
+	color: currentColor;
+	clip-path: none;
+	animation: paused;
+}
+
+
+body {
+	background: $back;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	margin: 2em auto;
+	padding: .5em 3em;
+	width: 20.5em;
+	height: auto;
+	background: $bw3;
+	border: .3em solid $bw5;
+	border-bottom: 5em solid $bw5;
+}
+
+p {
+	color: $bw5;
+	font-size: 2em;
+}
+
+.small {
+	font-size: .75em;
+}
+
+#author {
+	font-size: 1.25em;
+	font-style: italic;
+	text-align: right;
+}
+
+.color, .blackWhite {
+	color: transparent;	
+}
+
+.color {
+	animation: color 1s linear infinite;
+	clip-path: polygon(0 0, 15% 0, 	15% 90%, 20% 90%, 20% 0, 35% 0, 35% 90%, 40% 90%, 40% 0, 55% 0, 55% 90%, 60% 90%, 60% 0, 75% 0,75% 90%, 80% 90%, 80% 0, 95% 0,95% 100%, 90% 100%, 90% 10%, 85% 10%, 85% 100%, 70% 100%, 70% 10%, 65% 10%, 65% 100%, 50% 100%, 50% 10%, 45% 10%, 45% 100%, 30% 100%, 30% 10%, 25% 10%, 25% 100%, 10% 100%, 10% 10%, 5% 10%, 5% 100%, 0% 100%);
+	&:hover {
+		@include hover;
+	}
+}
+
+.blackWhite {
+	animation: blackWhite 1s linear infinite;
+	clip-path: polygon(0 50%, 100% 50%, 100% 70%, 0 70%);
+	&:hover {
+		@include hover;
+	}
+}
+
+@keyframes color {
+	0%, 100% {
+			background:  linear-gradient(45deg,$c1 0%, $c2 33%,$c3 66%,$c4 100%); 
+	}
+	
+	16.67% {
+			background:  linear-gradient(45deg,$c2 0%, $c3 33%,$c4 66%,$c5 100%); 
+	}
+	
+	33.33% {
+			background:  linear-gradient(45deg,$c3 0%, $c4 33%,$c5 66%,$c6 100%); 
+	}
+
+	50% {
+			background:  linear-gradient(45deg,$c4 0%, $c5 33%,$c6 66%,$c1 100%); 
+	}
+	
+	83.33% {
+			background:  linear-gradient(45deg,$c5 0%, $c6 33%,$c1 66%,$c2 100%); 
+	}	
+	
+}
+
+@keyframes blackWhite {
+	0%, 100% {
+			background:  linear-gradient(45deg,$bw1 0%, $bw2 33%,$bw3 66%,$bw4 100%); 
+	}
+	
+	25% {
+			background:  linear-gradient(45deg,$bw2 0%, $bw3 33%,$bw4 66%,$bw1 100%); 
+	}
+	
+	50% {
+			background:  linear-gradient(45deg,$bw3 0%, $bw4 50%,$bw1 63%,$bw2 100%); 
+	}
+
+	75% {
+			background:  linear-gradient(45deg,$bw4 0%, $bw1 50%,$bw2 63%,$bw3 100%); 
+	}
+	
+}
