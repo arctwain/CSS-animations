@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One');
+
+$red: rgba(255,0,0,.8);
+$black: rgba(0,0,0,.8);
+$white: rgb(210,210,210);
+
+* {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+body {
+	background: #222;
+}
+
+.container {
+	position: relative;
+	width: 540px;
+	height: 320px;
+	margin: 20px auto;
+	color: $white;
+	&:hover {
+		color: $red;
+	}
+	&:hover #c1,
+	&:hover #c2,
+	&:hover #c3,
+	&:hover #c4 {
+		animation: paused;
+		background: $black;
+	}
+}
+
+span, .top, .bottom,.circle {
+	position: absolute;
+}
+
+span {
+	top: 120px;
+	left: 20px;
+	text-transform: uppercase;
+	font-family: 'Fjalla One', sans-serif;
+	font-size: 120px;
+}
+
+span:nth-child(2) {
+	left: 460px;
+}
+
+.top,.bottom {
+	width: 150px;
+	height: 150px;
+	left: 300px;
+	background: $white;
+	border-radius: 50%;
+	animation: 2s rot linear infinite;
+}
+
+.top {
+	top: 10px;
+}
+
+.bottom {
+	top: 158px;
+	animation-direction: reverse;
+}
+
+.circle {
+	position: absolute;
+	top: 25px;
+	left: 25px;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+}
+
+#c1, #c3 {
+	background: $red;
+}
+
+#c2, #c4 {
+	background: $black;
+}
+
+#c1, #c4 {
+	animation: s1 5s ease-in-out infinite;
+}
+
+#c2, #c3 {
+	animation: s2 5s ease-in-out infinite;
+}
+
+@keyframes rot {
+	to {transform: rotate(360deg)}
+}
+
+@keyframes s1 {
+	0%,20%,80%,100% {
+		transform: translate(0,0);
+	}
+	
+	30%,70% {
+		transform: translate(45px, 45px) scale(.2,.2);
+	}
+	
+}
+
+@keyframes s2 {
+	0%,20%,80%,100% {
+		transform: translate(-45px, -45px) scale(.2,.2);
+	}
+	
+	30%,70%  {
+		transform: translate(0,0);
+	}
+	
+}
