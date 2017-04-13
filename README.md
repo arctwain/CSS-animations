@@ -1,3 +1,7 @@
-# Cube Illusion
+# CSS Animations
 
-Based on [this](http://www.thisiscolossal.com/wp-content/uploads/2015/03/florian-3.gif) gif.
+# Demos on Codepen #
+[Crazy Eights](https://codepen.io/TWAIN/full/oZJBZK/)
+[Obscured Words](https://codepen.io/TWAIN/full/yMwdEX/)
+
+
