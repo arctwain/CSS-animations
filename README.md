@@ -1,4 +1,5 @@
-# CSS Animations
+# Graphic Animations
+A collection of CSS/JS graphic animations which I made on Codepen
 
 **Demos on Codepen**<br>
 
