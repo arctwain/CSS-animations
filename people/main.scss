@@ -1,0 +1,347 @@
+$background: #1D1F20;
+$white: #fff; 
+$red: #F2594B;
+$red2: #DE5051;
+$red3: #CD2C24;
+$salmon: #F2594B;
+$salmon2: #F2836B;
+$yellow: #F2EC3B;
+$yellow2: #F2D03B;
+$ltyellow: #FFEB79;
+$mustard: #E5901A;
+$mustard2: #EFAE0F;
+$celadon: #47D9BF; 
+$blue: #00ACEB; 
+$blue2: #00A1D9;
+$navy: #003056;
+
+.face,.face:before,.face:after,
+.eye,
+.hat,
+.shorthair,.shorthair:after,
+.longhair,.longhair-2,
+.nose,
+.mouth,
+.neck,
+.torso,
+.bowtie,
+.pocket,.pocket:before,.pocket:after,
+.stripes,.stripes:before,.stripes:after,
+.collar,.collar:before,.collar:after,
+.buttons,.buttons:before,.buttons:after {
+	position: absolute;
+}
+
+body {
+	background: $background;
+}
+
+.graphic {
+	width: 75%;
+	height: 300px;
+	display: flex;
+	margin: auto;
+	margin-top: 50px;
+}
+
+.container {
+	width: 33%;
+	padding-top: 15px;
+}
+
+.container:nth-child(1) {
+	background: $celadon;
+}
+
+.container:nth-child(2) {
+	background: $blue;
+}
+
+.container:nth-child(3) {
+	background: $yellow;
+}
+
+.person1,.person2,.person3 {
+	width: 120px;
+	height: 270px;
+	margin: auto;
+	position: relative;
+}
+
+.torso {
+	width: 100px;
+	height: 145px;
+	top: 125px;
+	left: 10px;
+}
+
+.person1 .torso {
+	background: $red;
+	border-radius: 40px 40px 0 0;
+}
+
+.person2 .torso {
+	background: $navy;
+	clip-path: polygon(25% 0, 75% 0, 100% 10%, 100% 100%, 0 100%, 0 10%);
+}
+
+.person3 .torso {
+	background: $mustard2;
+	border-radius: 30px 30px 0 0;	
+}
+
+.face {
+	width: 100px;
+	height: 100px;
+	top: 20px;
+	left: 10px;
+	border-radius: 50%;
+	&:before, &:after {
+		content: " ";
+		width: 10px;
+		height: 20px;
+		top: 35px;
+		border-radius: 20px;
+	}
+	&:before {
+		left: -8px;
+	}
+		&:after {
+		right: -8px;
+	}	
+}
+
+.neck {
+	width: 30px;
+	height: 30px;
+	left: 35px;
+	top: 95px;
+	border-radius: 0 0 50% 50%;
+}
+
+.person1 .neck, .person1 .face, .person1 .face:before, .person1 .face:after {
+	background: $blue2;
+}
+
+.person2 .neck, .person2 .face, .person2 .face:before, .person2 .face:after {
+	background: $celadon;
+}
+
+.person3 .neck, .person3 .face, .person3 .face:before, .person3 .face:after {
+	background: $red2;
+}
+
+.hat {
+	width: 100px;
+	height: 50px;
+	left: 10px;
+	background: $yellow;
+	border-radius: 50px 50px 0 0;
+	z-index: 1;
+}
+
+.eye {
+	width: 10px;
+	height: 10px;
+	background: $white;
+	border-radius: 50%;
+}
+
+.eye.r {
+	top: 40px;
+	left: 20px;
+}
+
+.eye.l {
+	top: 40px;
+	right: 20px;	
+}
+
+.person2 .eye.r, .person2 .eye.l {
+	background: none;
+	border-top: 9px solid white;
+}
+
+.person1 .nose {
+	width: 11px;
+	height: 20px;
+	top: 40px;
+	right: 50px;
+	clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+	background: $yellow2;
+}
+
+.person2 .nose {
+	width: 10px;
+	height: 20px;
+	top: 40px;
+	left: 45px;
+	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+	background: $salmon2;
+}
+
+.person3 .nose {
+	width: 12px;
+	height: 11px;
+	top: 45px;
+	left: 44px;
+	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+	background: $ltyellow;
+}
+
+.mouth {
+	width: 50px;
+	height: 52px;
+	top: 20px;
+	left: 25px;
+	border-radius: 50px;
+	border-bottom: 10px solid $white;
+}
+
+.bowtie {
+	width: 40px;
+	height: 27px;
+	background: $yellow2;
+	top: 132px;
+	left: 40px;
+	clip-path: polygon(50% 50%, 100% 0, 100% 100%, 50% 50%, 0 100%, 0 0);
+}
+
+.pocket {
+	width: 25px;
+	height: 8px;
+	top: 57px;
+	left: 10px;
+	background: $yellow2;
+	&:before,&:after {
+		content: "";
+		width: 25px;
+		height: 8px;
+	}
+	&:before {
+		top: -10px;
+		background: $mustard;
+	}
+	&:after {
+		top: 10px;
+		background: $ltyellow;
+	}
+}
+
+.collar {
+	width: 10px;
+	height: 35px;
+	top:  125px;
+	left: 55px;
+	&:before {
+		content: " ";
+		width: 20px;
+		height: 35px;
+		left: -20px;
+		background: $red;
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 40%);
+	}
+	&:after {
+		content: "";
+		width: 20px;
+		height: 35px;
+		left: 10px;
+		background: $red;
+		clip-path: polygon(0 0, 100% 0, 100% 40%, 0 100%);
+	}
+}
+
+.buttons {
+	&,&:before,&:after {
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		background: $red;
+	}
+	left: 56px;
+	top: 190px;
+	&:before {
+		content: "";
+		top: -14px;
+	}
+	&:after {
+		content: "";
+		top: 14px;
+	}
+}
+
+.shorthair {
+		width: 38px;
+		height: 34px;
+		top: 22px;
+		left: 12px;
+		background: $mustard;
+	  border-radius: 50px 0px; 
+		z-index: 1;
+		&:after  {
+			content: "";
+			width: 65px;
+			height: 30px;
+			left: 33px;
+			transform: rotate(8deg);
+			border-radius: 0px 40px; 
+			background: $mustard;
+	}
+}
+
+.longhair {
+	width: 100px;
+	height: 40px;
+	top: 15px;
+	left: 10px;
+	background: $celadon;
+	border-radius: 100px 100px 0 0;
+	clip-path: polygon(0 0, 100% 0, 100% 100%,90% 80%,80% 100%,65% 80%,50% 100%,35% 80%,20% 100%,10% 80%,0 100%);
+	z-index: 1;
+}
+
+.longhair-2 {
+	width: 100px;
+	height: 65px;
+	background: $celadon;
+	top: 50px;
+	left:10px;
+}
+
+.stripes {
+	width: 30px;
+	height: 8px;
+	top: 43px;
+	left: 35px;
+	transform: rotate(45deg);
+	background: $salmon;
+	&:before,&:after {
+		content: "";
+		width: 30px;
+		height: 8px;
+	}
+	&:before {
+		top: 15px;
+		left: -15px;
+		background: $salmon2;
+	}
+	&:after {
+		top: -15px;
+		left: 15px;
+		background: $red3;
+	}
+}
+
+/* Animation Timing */
+
+.person1 {
+	animation-delay: 2s;
+}
+
+.person2 {
+	animation-delay: 3s;
+}
+
+.person3 {
+	animation-delay: 2.5s;
+}
