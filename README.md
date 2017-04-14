@@ -6,7 +6,7 @@ A collection of CSS/JS graphic animations which I made on Codepen
 [Cip-path Hexagons](https://codepen.io/TWAIN/full/ygGyzj/)<br>
 [Octagram Loader](https://codepen.io/TWAIN/full/YZWXVg/)<br>
 [Toaster](https://codepen.io/TWAIN/full/rjQNpJ/)<br>
-[Cone Illusion](https://codepen.io/TWAIN/details/jyojzv/)<br>
+[Cone Illusion](https://codepen.io/TWAIN/full/jyojzv/)<br>
 [What's Your Superpower?](https://codepen.io/TWAIN/full/jBpMdL/)<br>
 [Crazy Eights](https://codepen.io/TWAIN/full/oZJBZK/)<br>
 [Obscured Words](https://codepen.io/TWAIN/full/yMwdEX/)<br>
