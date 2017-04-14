@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+$background: #8FBC8F;
+$metal: #888;
+$toaster: #FF0000;
+$knob: #fff;
+$bread: #E4D8BE;
+$crust: #CCB26E;
+$toast: #98836E;
+$darkCrust: #4B3621;
+$black: #231F20;
+@mixin bord {
+	border: 7px solid $black;
+}
+@mixin toasterDim {
+	width: 170px;
+	height: 110px;
+	border-radius: 30px 30px 10px 10px;
+}
+
+.contain-smoke,
+.crust-bottom,
+.crust,
+.toast,
+.toast-bottom,
+.toaster-back,
+.toaster-back:after,
+.toaster,
+.base:before,
+.base,
+.knob-base,
+.knob {
+	position: absolute;
+}
+
+body {
+	background: $background;
+}
+
+p {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 100px;
+	line-height: 10px;
+	text-align: center;
+	color: white;
+	position: absolute;
+	top: 250px;
+}
+
+/* Controls */
+
+#run,#reset {
+	width: 75px;
+	height: 75px;
+	top: 320px;
+	left: 78px;
+	background: $metal;
+	position: absolute;
+	border-radius: 50%;
+	text-align: center;
+	color: #fff;
+	z-index: 1;
+	&:focus{
+		outline:0;
+	}
+}
+
+#reset {
+  left: 157px;
+}
+
+/*  Main Container */
+
+.container {
+	width: 330px;
+	height: 320px;
+	margin: auto;
+	position: relative;
+	border-bottom: none;
+}
+
+/* Smoke */
+
+.contain-smoke{
+	width: 50px;
+	height: 120px;
+	top: 80px;
+	opacity: 0;
+}
+
+.smoke {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+}
+
+.right {
+	border-right: 4px solid $black;
+}
+
+.left {
+	border-left: 4px solid $black;
+}
+
+.contain-smoke:nth-child(1){
+	left: 160px;
+}
+
+.contain-smoke:nth-child(2){
+	left: 120px;
+}
+
+/* toaster */
+
+.toaster-back {
+	top: 175px;
+	left: 50px;
+	@include toasterDim;
+	@include bord;
+	background: $metal;
+	&:after {
+		content: " ";
+		top: -7px;
+		left: 15px;
+		@include toasterDim;
+		@include bord;
+	}
+}
+
+.toaster {
+	top: 175px;
+	left: 95px;
+	@include toasterDim;
+	@include bord;
+  background: $toaster;
+}
+
+.base {
+	width: 170px;
+	height: 3px;
+	top: 291px;
+	left:  95px;
+	background: $metal;
+	border-radius: 5px;
+	@include bord;
+	&:before {
+		content: "";
+		width: 35px;
+		height: 3px;
+		top: -7px;
+		left: -48px;
+		background: $metal;
+		@include bord;
+		border-radius: 5px;
+	}
+}
+
+.knob-base {
+	top: 190px;
+	left: 110px;
+	width: 23px;
+	height: 23px;
+	background: $metal;
+	border-radius: 50px;
+	@include bord;
+}
+
+.knob {
+	top: 190px;
+	left: 122px;
+	width: 23px;
+	height: 23px;
+	background: white;
+	border-radius: 50px;
+	@include bord;
+}
+
+/* bread */
+
+.crust {
+	width: 50px;
+	height: 15px;
+	top: 120px;
+	left: 86px;
+	background: $crust;
+	border-radius: 20px;
+	@include bord;
+}
+
+.crust-bottom {
+		width: 40px;
+		height: 60px;
+		top: 147px;
+		left: 94px;
+		background: $crust;
+		@include bord;
+		border-right: none;
+		border-top: none;
+  	border-radius: 0 0 0 10px;
+}
+
+.toast{
+		width: 100px;
+		height: 15px;
+		top: 120px;
+		left: 98px;
+		background: $bread;
+		border-radius: 20px;
+		@include bord;
+}
+
+.toast-bottom{
+		width: 85px;
+		height: 65px;
+		top: 142px;
+		left: 106px;
+		background: $bread;
+		@include bord;
+		border-top: none;
+		border-radius: 5px; 
+}
+
+.crust-bottom.front {
+		top: 142px;
+		left: 128px;
+	
+}
+.crust.front {
+  	top: 120px;
+		left: 121px;
+}
+
+.toast.front {
+		top: 120px;
+		left: 133px;
+}
+
+.toast-bottom.front {
+		top: 142px;
+		left: 140px;
+}
+
+/* animations */
+
+.makeToast {
+	animation: makeToast 5s linear;
+}
+
+.darkToast {
+	animation:  darkToast 5s forwards;
+}
+
+.darkCrust{
+	animation: darkCrust 5s forwards;
+}
+
+.moveKnob {
+	animation: moveKnob 5s linear;
+}
+
+.hotToaster {
+	animation: hotToaster 5s linear;
+}
+
+.smokeAppear {
+	animation: smokeAppear 5s linear;
+}
+
+@keyframes makeToast {
+	10%,90% { transform: translateY(90px); }
+	92% {transform: translateY(0px)}
+	95% { transform: translateY(-20px)}
+}
+
+@keyframes darkToast {
+	30% {background: $bread}
+	to {background: $toast}
+}
+
+@keyframes darkCrust {
+	30% {background: $crust}
+	to {background: $darkCrust}
+}
+
+@keyframes moveKnob {
+	10%,92% {transform: translateX(-12px)}
+	95% {transform: translateX(0px)}
+}
+
+@keyframes hotToaster {
+	80% {background: #850000;}
+}
+
+@keyframes smokeAppear {	
+	30% {opacity: .1;
+			transform: skewX(2deg)}
+	70% {opacity: .4;
+			transform: skewY(10deg)}
+	75% {opacity: .3;
+			transform: skewX(-2deg)}
+}
