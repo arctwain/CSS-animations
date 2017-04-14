@@ -1,0 +1,482 @@
+@import url('https://fonts.googleapis.com/css?family=Satisfy');
+
+$bac: #1D1F20;
+$blk: #000;
+$whi: #FFF;
+$red: #DC0000;
+$grn: #00FF00;
+$blu: #0000FF;
+$mar: #800C03;
+$ora: #F77F00;
+
+body {
+	background: $bac;
+}
+
+p {
+	visibility: hidden;
+}
+
+.newYear {
+	position: absolute;
+	visibility: visible;
+	font-size: 1.75em;
+	font-family: 'Satisfy', cursive;
+	top: 5.5em;
+	left: 4.75em;
+	color: red;
+	z-index: 3;
+	animation: sizeChng 1s linear infinite;
+}
+
+.container {
+	position: relative;
+	width: 24em;
+	height: 60em;
+	margin: auto;
+	margin-top: 4em;
+  overflow: hidden;
+}
+
+.container > div {
+	position: absolute;
+	width: 4em;
+	height: 4em;
+}
+
+.container > div:nth-child(1) {
+	background: $blk;
+}
+
+.container > div:nth-child(2){
+	left: 2em;
+	background: $whi;
+	border-radius: 50%;
+}
+
+.container > div:nth-child(3) {
+	left: 4em;
+	background: $red;
+	z-index: 1;
+}
+
+.container > div:nth-child(4) {
+	left: 8em;
+	background: $whi;
+}
+
+.container > div:nth-child(5) {
+	left: 8em;
+	top: 2em;
+	background: $red;
+	border-radius: 50%;
+}
+
+.container > div:nth-child(6) {
+	left: 12em;
+	background: $blk;
+	z-index: -1;
+}
+
+.container > div:nth-child(7) {
+	left: 10em;
+	background: $red;
+	border-radius: 50%;
+	z-index: -1;
+}
+
+.container > div:nth-child(8) {
+	left: 16em;
+	background: $red;
+}
+
+.container > div:nth-child(9) {
+	left: 20em;
+	background: $ora;
+}
+
+.container > div:nth-child(10) {
+	left: 22em;
+	background: $red;
+	border-radius: 50%;
+}
+
+/* second row */
+.container > div:nth-child(11) {
+	top: 4em;
+	background: $whi;
+}
+
+.container > div:nth-child(12) {
+	left: 4em;
+	top: 4em;
+	height: 2em;
+	background: $ora;
+	z-index: 2;
+}
+
+.container > div:nth-child(13) {
+	left: 8em;
+	top: 4em;
+	background: $blk;
+}
+
+.container > div:nth-child(14) {
+	left: 8em;
+	top: 4em;
+	background: $whi;
+	border-radius: 50% 0 0 0;
+}
+
+/* first eye */
+.container > div:nth-child(15) {
+	left: 11em;
+	top: 4.5em;
+	height: .5em;
+	width: .5em;
+	background: $blk;
+	border-radius: 50%;
+	z-index: 1;
+}
+
+.container > div:nth-child(16) {
+	left: 12em;
+	top: 4em;
+	background: $whi;
+}
+
+.container > div:nth-child(17) {
+	left: 12em;
+	top: 4em;
+	height: 2em;
+	background: $ora;
+	clip-path: polygon(100% 0, 0% 100%, 0 0);
+}
+
+.container > div:nth-child(18) {
+	left: 16em;
+	top: 4em;
+	background: $blk;
+}
+
+.container > div:nth-child(19) {
+	left: 20em;
+	top: 4em;
+	background: $whi;
+}
+
+/* third row */
+.container > div:nth-child(20) {
+	top: 6em;
+	background: $ora;
+}
+
+.container > div:nth-child(21) {
+	top: 6em;
+	left: -2em;
+	background: $red;
+	border-radius: 50%;
+}
+
+.container > div:nth-child(22) {
+	top: 6em;
+	left: 4em;
+	background: $blk;
+	z-index: 1;
+}
+
+.container > div:nth-child(23) {
+	top: 4em;
+	left: 4em;
+	background: $red;
+	border-radius: 50%;
+	z-index: 1;
+}
+
+.container > div:nth-child(24) {
+	top: 6em;
+	left: 8em;
+	background: $whi;
+	z-index: 1;
+}
+
+.container > div:nth-child(25) {
+	top: 6em;
+	left: 12em;
+	background: $blk;
+}
+
+.container > div:nth-child(26) {
+	top: 6em;
+	left: 10em;
+	background: $red;
+	border-radius: 50%;
+}
+
+.container > div:nth-child(27) {
+	top: 6em;
+	left: 16em;
+	background: $whi;
+}
+
+.container > div:nth-child(28) {
+	top: 6em;
+	left: 18em;
+	background: $red;
+	border-radius: 50%;
+}
+
+.container > div:nth-child(29) {
+	top: 6em;
+	left: 20em;
+	background: $ora;
+}
+
+.container > div:nth-child(30) {
+	top: 8em;
+	left: 20em;
+	background: $red;
+	border-radius: 50%;
+}
+
+.container > div:nth-child(31) {
+	top: 10em;
+	background: $blk;
+}
+
+.container > div:nth-child(32) {
+	top: 10em;
+	left: 2em;
+	background: $red;
+	border-radius: 50%;
+}
+
+.container > div:nth-child(33) {
+	top: 10em;
+	left: 4em;
+	background: $whi;
+}
+
+.container > div:nth-child(34) {
+	top: 12em;
+	left: 4em;
+	background: $red;
+	border-radius: 50%;
+}
+
+.container > div:nth-child(35) {
+	top: 10em;
+	left: 8em;
+	background: $blk;
+}
+
+.container > div:nth-child(36) {
+	top: 10em;
+	left: 12em;
+	background: $ora;
+}
+
+.container > div:nth-child(37) {
+	top: 10em;
+	left: 16em;
+	height: 2em;
+	background: $ora;
+}
+
+.container > div:nth-child(38) {
+	top: 10em;
+	left: 16em;
+	height: 2em;
+	clip-path: polygon(0 100%, 0 0, 100% 100%);
+	background: $blk;
+}
+
+.container > div:nth-child(39) {
+	top: 12em;
+	left: 16em;
+	background: $whi;
+}
+
+.container > div:nth-child(40) {
+	top: 12em;
+	left: 18em;
+	background: $red;
+	border-radius: 50%;
+}
+
+/* curve */
+.container > div:nth-child(41) {
+	top: 10em;
+	left: 20em;
+	background: $blk;
+}
+
+.container > div:nth-child(42) {
+	top: 10em;
+	left: 20em;
+	background: $whi;
+	border-radius: 0 50% 0 0;
+}
+
+.container > div:nth-child(43) {
+	top: 10.5em;
+	left: 20.5em;
+	height: .5em;
+	width: .5em;
+	background: $blk;
+	border-radius: 50%;
+	z-index: 1;
+}
+
+.container > div:nth-child(44) {
+	top: 14em;
+	height: 2em;
+	background: $ora;
+}
+
+.container > div:nth-child(45) {
+	top: 14em;
+	height: 2em;
+	background: $whi;
+	clip-path: polygon(0 100%, 0 0, 100% 100%);
+}
+
+.container > div:nth-child(46) {
+	top: 14em;
+	left: 4em;
+	background: $blk;
+}
+
+.container > div:nth-child(47) {
+	top: 14em;
+	left: 4em;
+	background: $whi;
+	border-radius: 0 50% 0 0;
+}
+
+.container > div:nth-child(48) {
+	top: 14.5em;
+	left: 4.5em;
+	height: .5em;
+	width: .5em;
+	background: $blk;
+	border-radius: 50%;
+	z-index: 2;
+}
+
+.container > div:nth-child(49) {
+	top: 14em;
+	left: 8em;
+	height: 2em;
+	background: $ora;
+	z-index: 1;
+}
+
+.container > div:nth-child(50) {
+	top: 14em;
+	left: 12em;
+	background: $blk;
+}
+
+.container > div:nth-child(51) {
+	top: 14em;
+	left: 20em;
+	height: 6em;
+	background: $whi;
+}
+
+.container > div:nth-child(52) {
+	top: 16em;
+	background: $blk;
+}
+
+.container > div:nth-child(53) {
+	top: 16em;
+	left: 2em;
+	border-radius: 50%;
+	background: $red;
+}
+
+.container > div:nth-child(54) {
+	top: 16em;
+	left: 4em;
+	background: $whi;
+}
+
+.container > div:nth-child(55) {
+	top: 16em;
+	left: 8em;
+	background: $whi;
+}
+
+.container > div:nth-child(56) {
+	top: 14em;
+	left: 8em;
+	background: $blk;
+	border-radius: 50%;
+}
+
+.container > div:nth-child(57) {
+	top: 16em;
+	left: 12em;
+	background: $red;
+	z-index: 1;
+}
+
+.container > div:nth-child(58) {
+	top: 16em;
+	left: 14em;
+	background: $blk;
+	border-radius: 50%;
+}
+
+.container > div:nth-child(59) {
+	top: 16em;
+	left: 16em;
+	background: $ora;
+	z-index: -1;
+}
+
+.container div.blk {
+	background: $bac;
+}
+
+.container div.cmb1 {
+	background: $grn;
+	animation: colorChng 3s linear infinite;
+}
+
+.container div.cmb2 {
+	background: $blu;
+	animation: colorChng 3s linear infinite;
+	animation-delay: 1s;
+}
+
+.container div.cmb3 {
+	animation: colorChng 3s linear infinite;
+	animation-delay: 2s;
+}
+
+.blink {
+  animation: blink 3s linear infinite;
+  transform-origin: 50%;
+}
+
+@keyframes colorChng {
+	to {background: $mar}
+}
+
+@keyframes sizeChng{
+	25% {transform: skew(.5deg,.5deg);}
+	75% {transform: skew(1deg,1deg);}
+}
+
+@keyframes blink { 
+  0% { transform: scaleX(1) scaleY(1); } 
+  1% { transform: scaleX(1.3) scaleY(0.1); } 
+  2% { transform: scaleX(1) scaleY(1); } 
+  60% { transform: scaleX(1) scaleY(1); } 
+  61% { transform: scaleX(1.3) scaleY(0.1);} 
+  62% { transform: scaleX(1) scaleY(1); } 
+  100% { transform: scaleX(1) scaleY(1); }
+}
