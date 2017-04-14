@@ -1,0 +1,40 @@
+$x: 4; // vary for size;
+$col1: rgb(255,0,0); // color 1 selection
+$col2: rgb(0,0,255); // color 2 selection
+$w: #{$x*.7071};  // calculate width
+$h: #{$x*1.7071}; // calculate height
+$c: #{$x*2*1.7071}; // calculate container 
+
+body {
+	background: #000;
+}
+
+.container {
+	width: #{$c}em;
+	height:#{$c}em;
+	margin: auto;
+	position: relative;
+}
+
+.rhombus {
+	width: #{$w}em;
+	height: #{$h}em;
+	clip-path: polygon(0 41.42%, 100% 0%, 100% 58.58%, 0% 100%);
+	background: linear-gradient(#888,#fff,#888);
+	background-color: $col1;
+	position: absolute;
+	left: #{$h}em;
+	transform-origin: 0 100%;
+	animation: clr 1.6s linear infinite;
+}
+
+@for $i from 1 through 8 {
+	.rhombus:nth-child(#{$i}) {
+		transform: rotate(#{$i*45}deg);
+		animation-delay: #{$i*.1}s;
+	}
+}
+
+@keyframes clr {
+	50% {background: $col2}
+}
