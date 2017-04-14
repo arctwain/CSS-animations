@@ -1,0 +1,81 @@
+$w: 40;  // Change this value to resize
+$h: $w/.866;  // Technically sqrt(3)/2
+
+body {
+	background: #000;
+}
+
+.wrapall {
+	width: #{9*$w}px;
+	margin: auto;
+}
+
+.wrapper {
+	float: left;
+	width: #{3*$w}px;
+	height: #{3*$w - 4}px;
+	margin: auto;
+	position: relative;
+}
+
+.hex {
+	width: #{$w}px;
+	height: #{$h}px;
+	position: absolute;
+	clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+	animation: color .7s linear infinite;
+}
+
+.hex:nth-child(1) {
+	top: 0px;
+	left: #{$w/2}px;
+	animation-delay: .1s;
+}
+
+.hex:nth-child(2) {
+	top: 0px;
+	left: #{$w*3/2}px;
+	animation-delay: .2s;
+}
+
+.hex:nth-child(3) {
+	top: #{$h - $w*.29}px;
+	left: 0px;
+	animation-delay: .6s;
+}
+
+.hex:nth-child(4) {
+	top: #{$h - $w*.29}px;
+	left: #{$w}px;
+	animation-delay: .7s;
+}
+
+.hex:nth-child(5) {
+	top: #{$h - $w*.29}px;
+	left: #{$w*2}px;
+	animation-delay: .3s;
+}
+
+.hex:nth-child(6) {
+	top: #{2*$h - $w*2*.3}px;
+	left: #{$w/2}px;
+	animation-delay: .5s;
+}
+
+.hex:nth-child(7) {
+	top: #{2*$h - $w*2*.29}px;
+	left: #{$w*3/2}px;
+	animation-delay: .4s;
+}
+
+.wrapper:nth-child(2n) .hex {
+	background: #ff0000;
+}
+
+.wrapper:nth-child(2n+1) .hex {
+	background: #000;
+}
+
+@keyframes color {
+	50% {background: #fff;}
+}
