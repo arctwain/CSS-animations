@@ -1,0 +1,66 @@
+$n: 1s;        
+$x: .1;         // animation delay
+$c0: #000;      // background
+$c1: #F38d79;   // map colors
+$c2: #0B7074;
+$c3: #F05050;
+$c4: #7DCFC1;
+$c5: #FFF5DA;
+
+body {
+	background: $c0;
+	font-size: .625em;
+	margin: 5em auto;
+}
+
+.wrapper {
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+	width: 49em;
+	height: 1em;
+}
+
+.c0,.c1,.c2,.c3,.c4,.c5,.c6 {
+	width: 1em;
+	height: 1em;
+	border-radius: 50%;
+}
+
+.c0 {
+	background: $c0;
+	animation: wave $n linear infinite;
+}
+
+.c1 {
+	background: $c1;
+}
+
+.c2 {
+	background: $c2;
+}
+.c3 {
+	background: $c3;
+}
+
+.c4 {
+	background: $c4;
+}
+
+.c5 {
+	background:  $c5;
+}
+
+@for $i from 2 through 49 {
+	.wrapper > div:nth-child(#{$i}).c0 {
+		animation-delay: #{($i - 1)*$x}s;
+	}
+}
+
+@keyframes wave {
+	0%, 100% {background: #111}
+	20% {background: #222}
+	40% {background: #333}
+	60% {background: #444}
+	80% {background: #555}
+}
