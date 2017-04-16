@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
+$yel1: 	#FFD450;
+$yel2: 	#FFBF4C;
+$red1:	#F0495C;
+$red2:	#F13354;
+$red3:	#E7254E;
+$ora1:	#FF8051;
+$ora2:	#FF654D;
+$cya:		#00FFFF;
+
+body {
+ background:linear-gradient(top, #fff 0%, cyan 100%);
+}
+
+.head,
+.comb1,.comb1:after,
+.comb2,.comb2:after,
+.comb3,
+.brow,
+.eye,.eye:after,
+.beak,
+.neck,
+.torso,
+.wing,.wing:after,
+.leg,.leg:before,
+.foot,.foot:before,.foot:after
+	 {
+	position: absolute;
+}
+
+.chick {
+	position: relative;
+	width: 15.5em;
+	height: 25em;
+	margin: auto;
+}
+
+.head {
+	width: 15.5em;
+	height: 15.3em;
+	border-radius: 45%;
+	background: $yel1;
+	top: 5em;
+}
+
+.brow {
+	width: 2em;
+	height: 2em;
+	border-radius: 50%;
+	border-top: 2px solid #000;
+	border-left: 2px solid transparent;
+	border-right: 2px solid transparent;
+}
+
+.brow.right {
+	top: 5.5em;
+	left: 3em;
+	transform: rotate(-25deg);
+}
+
+.brow.left {
+	top: 5.5em;
+	left: 13em;
+	transform: rotate(25deg);
+}
+
+.comb1 {
+	width: 2.8em;
+	height: 3.5em;
+	top: -4.5em;
+	left: 7em;
+	background: $red1;
+	border-radius: 45%;
+	transform: rotate(-16deg);
+	z-index: -1;
+	&:after {
+		content: '';
+		width: 2.1em;
+		height: 4em;
+		top: 1.1em;
+		left: .2em;
+		border-radius: 20%;
+		transform: rotate(25deg);
+		background: $red1;
+	}
+}
+
+.comb2 {
+	left: 4.5em;
+	top: -3em;
+	width: 2.1em;
+	height: 2.2em;
+	border-radius: 45%;
+	transform: rotate(-25deg);
+	background: $red2;
+  z-index: -1;
+	&:after {
+		content: '';
+		width: 2.2em;
+		height: 3.5em;
+		background: $red2;
+		top: .4em;
+		left: .1em;
+		border-radius: 1em 1em 0 0;
+		transform: rotate(-6deg);
+	}
+}
+
+.comb3 {
+	width: 2em;
+	height: 2em;
+	background: $red3;
+	border-radius: 45%;
+	top: -.8em;
+	left: 3.6em;
+	z-index: -1;
+	transform: rotate(-20deg);
+}
+
+.eye {
+	width: 1.6em;
+	height: 2.5em;
+	background: #000;
+	border-radius: 50%;
+	transform-origin: 50%;
+	animation: blink 3s linear infinite;
+	&:after {
+		content: '';
+		width: .5em;
+		height: .5em;
+		top: .5em;
+		left: .7em;
+		background: #fff;
+		border-radius: 50%;
+	}
+}
+
+.eye.right {
+	top: 7.1em;
+	left: 3em;
+}
+
+.eye.left {
+	top: 7.2em;
+	left: 13.2em;
+}
+
+.beak {
+	width: 2.9em;
+	height: 3em;
+	top: 8.8em;
+	left: 7.8em;
+	background: $ora1;
+	border-radius: 50px 50px 0 0 ;
+	transform: rotate(7deg);
+	&:after {
+		position: absolute;
+		content: '';
+		width: 2em;
+		height: 1.2em;
+		top: 3em;
+		left: .4em;
+		background: $ora2;
+		border-radius: 0 0 50% 50%;
+	}
+}
+
+.torso {
+	width: 5em;
+	height: 5em;
+	background: $yel1;
+	top: 21.7em;
+	left: 5.4em;
+	border-radius: 50%;
+}
+
+.neck {
+	width: 2em;
+	height: 0;
+	top: 20em;
+	left: 6.2em;
+	border-bottom: 4em solid $yel1;
+	border-left: 1em solid transparent;
+	border-right: 1em solid transparent;
+}
+
+
+.wing {
+	width: 3em;
+	height: 1.3em;
+	background: $yel2;
+	border-radius: 50%;
+	transform-origin: 50% 100%;
+	&:after {
+		content: '';
+		width: 2.5em;
+		height: 1em;
+		background: $yel2;
+		border-radius: 50%;
+	}
+}
+
+.wing.right {
+	top: -.5em;
+	left: -1.7em;
+	transform: rotate(45deg);
+	animation: wingRight 5s linear infinite;
+	&:after {
+		top: 1em;
+		left: .5em;
+		transform: rotate(-10deg);
+	}
+}
+
+.wing.left {
+	top: -1.5em;
+	left: 3.5em;
+	z-index: -1;
+	transform: rotate(135deg);
+	animation: wingLeft 5s linear infinite;
+	&:after{
+		top: -.6em;
+		left: .5em;
+		transform: rotate(20deg);
+	}
+}
+
+.leg {
+	width: .2em;
+	height: 2em;
+	background: $ora1;
+	border-radius: 1em;
+	top: 4.5em;
+	&:before {
+		content: '';
+		width: 1em;
+		height: 1em;
+		background: $yel1;
+		top: -.2em;
+		left: -.4em;
+		border-radius: 50%;
+	}
+}
+
+.leg.right {
+		left: 1.5em;
+}
+
+.leg.left {
+		left: 3em;
+}
+
+.foot {
+	width: .15em;
+	height: .6em;
+	background: $ora1;
+	top: 2em;
+	left: .05em;
+	&:before, &:after {
+		content: '';
+		background: $ora1;
+		width: .15em;
+		height: .6em;
+		transform-origin: top;
+	}
+	&:before {
+		transform: rotate(45deg);
+	}
+	&:after {
+		transform: rotate(-45deg);
+	}
+}
+
+p {
+	text-align: center;
+	padding-top: 11em;
+	font-family: 'Lobster', cursive;
+	font-size: 2.7em;
+  color: $red1;
+}
+
+
+/* animation */
+
+@keyframes blink { 
+  0% { transform: scaleX(1) scaleY(1); } 
+  1% { transform: scaleX(1.3) scaleY(0.1); } 
+  2% { transform: scaleX(1) scaleY(1); } 
+  60% { transform: scaleX(1) scaleY(1); } 
+  61% { transform: scaleX(1.3) scaleY(0.1);} 
+  62% { transform: scaleX(1) scaleY(1); } 
+  100% { transform: scaleX(1) scaleY(1); }
+}
+
+@keyframes wingRight { 
+	0%,9%,11%,14%,16%, 100% {transform: rotate(45deg)}
+	10%,15% {transform: rotate(30deg) translateY(15px)}
+}
+
+@keyframes wingLeft { 
+		0%,9%,11%,14%,16%, 100% {transform: rotate(135deg)}
+	10%,15% {transform: rotate(150deg) translateY(-15px)}
+}
