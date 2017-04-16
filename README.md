@@ -12,5 +12,5 @@ A collection of CSS/JS graphic animations which I made on Codepen
 [What's Your Superpower?](https://codepen.io/TWAIN/full/jBpMdL/)<br>
 [Crazy Eights](https://codepen.io/TWAIN/full/oZJBZK/)<br>
 [Obscured Words](https://codepen.io/TWAIN/full/yMwdEX/)<br>
-
+[Chick - Happy Easter](https://codepen.io/TWAIN/full/YVXpze/)<br>
 
