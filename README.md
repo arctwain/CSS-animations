@@ -13,4 +13,5 @@ A collection of CSS/JS graphic animations which I made on Codepen
 [Crazy Eights](https://codepen.io/TWAIN/full/oZJBZK/)<br>
 [Obscured Words](https://codepen.io/TWAIN/full/yMwdEX/)<br>
 [Chick - Happy Easter](https://codepen.io/TWAIN/full/YVXpze/)<br>
+[Flame](https://codepen.io/TWAIN/full/35e3ae6e2b5f40d2a27ca2268416232d/)
 
