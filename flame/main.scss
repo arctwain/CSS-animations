@@ -1,0 +1,98 @@
+body {
+	background: #000;
+}
+
+.container {
+ 	margin: 5rem auto;
+ 	width: 3.75rem;
+ 	height: 3.75rem;
+ 	position: relative;
+ 	transform-origin: center bottom;
+ 	animation: flicker 3ms ease-in infinite alternate;
+}
+
+.flame {
+ 	bottom: 0;
+ 	position: absolute;
+ 	border-bottom-right-radius: 50%;
+ 	border-bottom-left-radius: 50%;
+ 	border-top-left-radius: 50%;
+ 	transform: rotate(-45deg) scale(1.5, 1.5);
+}
+
+.yellow {
+ 	left: .9375rem;
+ 	width: 1.875rem;
+ 	height: 1.875rem;
+ 	background: #ffd700;
+ 	box-shadow: 0 0 .5625rem .25rem #ffd700;
+}
+
+.orange {
+ 	left: .625rem;
+ 	width: 2.5rem;
+ 	height: 2.5rem;
+ 	background: #ffa500;
+ 	box-shadow: 0 0 .5625rem .25rem #ffa500;
+}
+
+.red {
+ 	left: .3125rem;
+ 	width: 3.125rem;
+ 	height: 3.125rem;
+ 	background: #ff4500;
+ 	box-shadow: 0 0 .3125rem .25rem #ff4500;
+}
+
+.white {
+ 	left: .9375rem;
+ 	bottom: -.25rem;
+ 	width: 1.875rem;
+ 	height: 1.875rem;
+ 	background: #fff;
+ 	box-shadow: 0 0 .5625rem .25rem #fff;
+}
+
+.circle {
+ 	border-radius: 50%;
+ 	position: absolute;
+}
+
+.blue {
+ 	width: .625rem;
+ 	height: .625rem;
+ 	left: 1.5625rem;
+ 	bottom: -1.5625rem;
+ 	background: #6a5acd;
+ 	box-shadow: 0 0 .9375rem .625rem #6a5acd;
+}
+
+.black {
+ 	width: 2.5rem;
+ 	height: 2.5rem;
+ 	left: .625rem;
+ 	bottom: -3.75rem;
+ 	background: #000;
+ 	box-shadow: 0 0 .9365rem .625rem #000;
+}
+
+@keyframes flicker {
+ 0% {
+  	transform: rotate(-1deg);
+ }
+ 20% {
+  	transform: rotate(1deg);
+ }
+ 40% {
+  	transform: rotate(-1deg);
+ }
+ 60% {
+  	transform: rotate(1deg) scaleY(1.04);
+ }
+ 80% {
+  	transform: rotate(-2deg) scaleY(0.92);
+ }
+ 100% {
+  	transform: rotate(1deg);
+ }
+}
